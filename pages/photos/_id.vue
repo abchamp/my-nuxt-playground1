@@ -9,6 +9,7 @@
 </template>
 <script>
 export default {
+  middleware: ['isLoggedIn'],
   async asyncData({ $axios, params }) {
     const photo = await $axios.$get(
       `https://picsum.photos/id/${params.id}/info`

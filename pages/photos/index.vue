@@ -32,6 +32,7 @@
 <script>
 export default {
   name: 'PhotosIndexPage',
+  middleware: ['isLoggedIn'],
   async asyncData({ $axios }) {
     const photos = await $axios.$get('https://picsum.photos/v2/list?limit=19')
     return { photos }

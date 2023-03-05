@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  middleware: 'isLoggedIn',
+  middleware: ['logger', 'isLoggedIn'],
   data: () => ({
     valid: true,
     email: 'admin@admin.com',

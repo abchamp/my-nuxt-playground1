@@ -36,8 +36,13 @@ router.post('/login', (req, res) => {
   }
 })
 
-app.use('/api', router)
+// app.use('/api', router)
+// app.listen(3001, () => {
+//   console.log('Mock API start on port 3001')
+// })
 
-app.listen(3001, () => {
-  console.log('Mock API start on port 3001')
-})
+app.use(router)
+module.exports = {
+  path: '/api',
+  handler: app,
+}

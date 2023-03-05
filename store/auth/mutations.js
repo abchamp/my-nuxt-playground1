@@ -1,6 +1,6 @@
 export default {
   setCurrentUser(state, payload) {
-    state.currentUser = payload
-    state.isAuthenticated = true
+    state.loggedIn = payload.loggedIn
+    state.user = payload.user
   },
 }
